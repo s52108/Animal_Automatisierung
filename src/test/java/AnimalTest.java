@@ -11,6 +11,8 @@ class AnimalTest {
     Animal lion;
     Animal snake;
 
+    Animal bear;
+
 
     String species;
     String animalloud;
@@ -22,6 +24,7 @@ class AnimalTest {
         cat = new Animal("Kitty",8,"cat");
         lion = new Animal("Simba",4,"lion");
         snake = new Animal("Slytherin",1,"snake");
+        bear = new Animal("Winnie",10,"bear");
 
     }
 
@@ -33,6 +36,7 @@ class AnimalTest {
         Assertions.assertEquals("miau",cat.giveAnimalLoud());
         Assertions.assertEquals("roar",lion.giveAnimalLoud());
         Assertions.assertEquals("We no speak animal.",snake.giveAnimalLoud());
+        Assertions.assertEquals("We no speak animal.",bear.giveAnimalLoud());
 
     }
 
@@ -42,14 +46,17 @@ class AnimalTest {
         String kittyname = "Kitty";
         String simbaname = "Simba";
         String slytherinname = "Slytherin";
+        String winniename = "Winnie";
         int wuffialter = 3;
         int kittyalter = 8;
         int simbaalter = 4;
         int slytherinalter = 1;
+        int winniealter = 10;
         Assertions.assertEquals(wuffiname + " | " + wuffialter,dog.getNameAndAge());
         Assertions.assertEquals(kittyname + " | " + kittyalter,cat.getNameAndAge());
         Assertions.assertEquals(simbaname + " | " + simbaalter,lion.getNameAndAge());
         Assertions.assertEquals(slytherinname + " | " + slytherinalter,snake.getNameAndAge());
+        Assertions.assertEquals(winniename + " | " + winniealter,bear.getNameAndAge());
 
     }
 
@@ -65,5 +72,6 @@ class AnimalTest {
         Assertions.assertEquals(oldAnimal,cat.ageCategory());
         Assertions.assertEquals(youngAnimal,lion.ageCategory());
         Assertions.assertEquals(babyAnimal,snake.ageCategory());
+        Assertions.assertEquals(oldAnimal,bear.ageCategory());
     }
 }
